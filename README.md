@@ -28,10 +28,7 @@ More information about plugins in the [MkDocs documentation][mkdocs-plugins]
 ## Usage
 When creating an internal Markdown link, you can omit the `.md` extension for the target page:
 
-`[My Page](source-page.md)` can be writted as `[My Page](source-page)`
-
-The plugin supports links with anchors:
-
-`[My Page](source-page.md#Point)` can be writted as `[My Page](source-page#Point)`
+`[My Page](source-page.md)` can be written as `[My Page](source-page)`
+`[My Page](source-page.md#Point)` can be written as `[My Page](source-page#Point)`
 
 [mkdocs-plugins]: http://www.mkdocs.org/user-guide/plugins/
