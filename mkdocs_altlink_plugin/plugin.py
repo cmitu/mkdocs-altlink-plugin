@@ -9,7 +9,7 @@ class AlternateLinkPlugin(BasePlugin):
     MD_LINK = re.compile(r']\(([^)]*)\)', re.UNICODE)
 
     def _should_ignore_link(self, link):
-        return link.startswith(u"http") or link.startswith(u"#") or link.startswith(u"ftp") or link.startswith(u"www") or link.endswith(u".md")
+        return link.startswith(u"http") or link.startswith(u"#") or link.startswith(u"ftp") or link.startswith(u"www") or link.startswith(u"mailto") or link.endswith(u".md")
 
     def _is_valid_file(self, path, root):
         return os.path.exists(path) or os.path.exists(root + "/" + path)
