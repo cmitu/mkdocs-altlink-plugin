@@ -9,7 +9,7 @@ alternate syntax for internal links, removing the need to add the `.md` suffix f
 
 Install the plugin with pip.
 ``` bash
-pip install https://github.com/cmitu/mkdocs-altlink-plugin
+pip install git+https://github.com/cmitu/mkdocs-altlink-plugin/
 ```
 
 Enable the plugin in your `mkdocs.yml`:
