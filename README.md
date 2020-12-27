@@ -7,9 +7,9 @@ alternate syntax for internal links, removing the need to add the `.md` suffix f
  
 ## Quick start
 
-Download this repo and (eventually) unzip it in a folder, or simply clone it via `git`:
+Install the plugin with pip.
 ``` bash
-git clone https://github.com/cmitu/mkdocs-altlink-plugin
+pip install git+https://github.com/cmitu/mkdocs-altlink-plugin/
 ```
 
 Enable the plugin in your `mkdocs.yml`:
