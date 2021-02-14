@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='mkdocs-altlink-plugin',
-    version='1.0.0',
+    version='1.0.1',
     packages=['mkdocs_altlink_plugin'],
     url='https://github.com/cmitu/mkdocs-altlink-plugin',
     license='MIT',
