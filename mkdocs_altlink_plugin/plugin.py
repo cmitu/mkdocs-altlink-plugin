@@ -26,8 +26,11 @@ class AlternateLinkPlugin(BasePlugin):
     def _should_ignore_link(self, link):
         return link.startswith(u"http") or link.startswith(u"#") or link.startswith(u"ftp") or link.startswith(u"www") or link.startswith(u"mailto") or link.endswith(u".md")
 
-    def _is_valid_file(self, path, root):
-        return os.path.exists(path) or os.path.exists(root + "/" + path)
+    def _is_valid_file(self, path, page_path, root):
+        for p in [path, os.path.join(root, page_path, path), os.path.join(root, path)]:
+            if os.path.exists(p):
+                return True
+        return False
 
     def on_page_markdown(self, markdown, page = None, config = None, **kwargs):
 
@@ -61,7 +64,7 @@ class AlternateLinkPlugin(BasePlugin):
                 continue
 
             # Check if the link is not a resource linked (img/pdf/etc)
-            if self._is_valid_file(vals[0], doc_dir):
+            if self._is_valid_file(vals[0], os.path.dirname(page.file.src_path), doc_dir):
                 continue
 
             # Append .md to the page name, this is an internal link candidate
